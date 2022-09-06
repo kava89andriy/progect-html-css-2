@@ -1,0 +1,265 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+.navigation {
+  background: #4e4e4e;
+  color: #fff;
+  padding: 20px 0;
+}
+.navigation-wraper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.nav-list {
+  display: flex;
+  gap: 20px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.nav-item a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.nav-item:last-child a {
+  cursor: not-allowed;
+}
+
+.hero-baner {
+  height: calc(100vh - 62px);
+  display: flex;
+  align-items: center;
+  background: url("bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-banner-content {
+  max-width: 550px;
+  color: #fff;
+  padding: 0 20px;
+}
+
+.hero-banner-content h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 40px 0;
+}
+
+.hero-banner-content p {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 40px 0;
+}
+
+.hero-banner-content a {
+  font-size: 18px;
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #fff;
+  padding: 10px 40px;
+  transition: all 0.2s ease;
+}
+
+.hero-banner-content a:hover {
+  color: #000;
+  border: 1px solid #fff;
+  background: #fff;
+}
+.mobile-toggle {
+  display: none;
+}
+.specialists {
+  padding: 50px 20px;
+}
+.section-title h2 {
+  margin: 0 0 60px 0;
+  font-size: 36px;
+  font-weight: 700;
+}
+.specialists .section-title h2 {
+  color: #152d41;
+}
+.specialist-item {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.specialist-item:nth-child(2n) {
+  margin-bottom: 50px;
+}
+.specialist-item:nth-child(2n + 1) {
+  flex-direction: row-reverse;
+}
+.specialist-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #ccc;
+  min-width: 200px;
+}
+.specialist-item:nth-child(odd) .specialist-photo {
+  background-image: url("specialist1.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.specialist-item:nth-child(even) .specialist-photo {
+  background-image: url("specialist2.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.specialist-info h3 {
+  margin: 0 0 15px 0;
+  font-size: 18px;
+}
+.specialist-info p {
+  margin: 0;
+  font-size: 18px;
+}
+.specialist-item:nth-child(2n + 1) .specialist-info {
+  text-align: right;
+}
+.services {
+  padding: 50px 20px;
+  background: #405d78;
+}
+.services .section-title h2 {
+  color: #fff;
+}
+.offer-wrapper {
+  margin: 0 auto;
+  max-width: 720px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+.offer-item {
+  background: #fff;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.7s ease;
+  cursor: pointer;
+  position: relative;
+}
+.offer-item h3 {
+  margin: 0 0 10px 0;
+}
+.offer-item span {
+  display: none;
+}
+.offer-item:hover {
+  transform: scale(1.05);
+}
+.offer-item:hover span {
+  display: block;
+}
+.offer-item:hover::before {
+  content: "";
+  display: block;
+  width: 22px;
+  height: 22px;
+  background: #e07a64;
+  position: absolute;
+  left: -11px;
+  top: -11px;
+  border-radius: 50%;
+}
+.footer {
+  background: #4e4e4e;
+  padding: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+.social {
+  display: flex;
+  gap: 20px;
+}
+.social a {
+  color: #fff;
+}
+
+@media all and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .nav-list {
+    display: none;
+  }
+  .mobile-toggle {
+    display: block;
+  }
+  .section-title h2 {
+    text-align: center;
+  }
+  .specialist-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .specialist-item:nth-child(2n + 1) {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .specialist-info {
+    text-align: left;
+  }
+  .specialist-item:nth-child(2n + 1) .specialist-info {
+    text-align: left;
+  }
+  .offer-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+  }
+  .footer-wrapper {
+    flex-direction: column;
+  }
+  .footer-text {
+    margin-bottom: 15px;
+  }
+}
