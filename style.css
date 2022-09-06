@@ -1,11 +1,20 @@
-html,
-body {
+*,
+*::before,
+*::after {
   padding: 0;
   margin: 0;
+  box-sizing: inherit;
+}
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+html,
+body {
   font-family: "Roboto", sans-serif;
 }
 .container {
-  width: 960px;
+  max-width: 960px;
   margin: 0 auto;
 }
 .navigation {
@@ -94,6 +103,7 @@ ul {
 }
 .specialists {
   padding: 50px 20px;
+  scroll-behavior: smooth;
 }
 .section-title h2 {
   margin: 0 0 60px 0;
@@ -175,16 +185,14 @@ ul {
 .offer-item h3 {
   margin: 0 0 10px 0;
 }
-.offer-item span {
-  display: none;
-}
+
 .offer-item:hover {
   transform: scale(1.05);
 }
 .offer-item:hover span {
   display: block;
 }
-.offer-item:hover::before {
+.offer-item:first-child::before {
   content: "";
   display: block;
   width: 22px;
@@ -216,7 +224,7 @@ ul {
   color: #fff;
 }
 
-@media all and (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .container {
     width: 100%;
     padding: 0 20px;
@@ -261,5 +269,6 @@ ul {
   }
   .footer-text {
     margin-bottom: 15px;
+    text-align: center;
   }
 }
