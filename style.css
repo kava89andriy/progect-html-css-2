@@ -92,12 +92,6 @@ ul {
   transition: all 1s ease;
 }
 
-.hero-banner-content a:hover {
-  color: #000;
-  border: 1px solid #fff;
-  background: #fff;
-}
-
 .specialists {
   padding: 50px 20px;
 }
@@ -181,12 +175,6 @@ ul {
   margin-bottom: 10px;
 }
 
-.offer-item:hover {
-  transform: scale(1.05);
-}
-.offer-item:hover span {
-  display: block;
-}
 .offer-item:first-child::before {
   content: "";
   display: block;
@@ -276,6 +264,17 @@ ul {
 }
 
 @media screen and (min-width: 1200px) {
+  .hero-banner-content a:hover {
+    color: #000;
+    border: 1px solid #fff;
+    background: #fff;
+  }
+  .offer-item:hover {
+    transform: scale(1.05);
+  }
+  .offer-item:hover span {
+    display: block;
+  }
   .hero-banner-content {
     padding: 0;
   }
